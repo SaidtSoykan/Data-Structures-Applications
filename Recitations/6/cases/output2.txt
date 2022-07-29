@@ -1,0 +1,4 @@
+test@d9d38dbf70fc:~/recitation_6_1_student$ ./bin/main cases/case2.txt
+No intersecting nodes found.
+Union nodes
+0 2 3 4 5 8 

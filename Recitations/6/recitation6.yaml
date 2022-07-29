@@ -1,0 +1,29 @@
+- init:
+    run: make clean
+    blocker: true
+
+- build:
+    run: make all # timeout: 5
+    exit: 0
+    blocker: true
+
+- case1:
+    run: ./bin/recitation6 cases/case1.txt
+    script:
+        - expect: 'Intersecting(.*?)nodes(\s+)'
+        - expect: '2 6 12 (\s+)'
+        - expect: 'Union(.*?)nodes(\s+)'
+        - expect: '1 2 3 4 5 6 7 8 9 12 34 43 46 86 (\s+)'
+        - expect: _EOF_ 
+    exit: 0
+    points: 2
+
+- case3:
+    run: ./bin/recitation6 cases/case2.txt
+    script:
+        - expect: 'No intersecting nodes found(.*?)(\s+)'
+        - expect: 'Union(.*?)nodes(\s+)'
+        - expect: '0 2 3 4 5 8 (\s+)'
+        - expect: _EOF_ 
+    exit: 0
+    points: 2

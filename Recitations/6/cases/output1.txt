@@ -1,0 +1,5 @@
+test@d9d38dbf70fc:~/recitation_6_1_student$ ./bin/main cases/case1.txt 
+Intersecting nodes
+2 6 12 
+Union nodes
+1 2 3 4 5 6 7 8 9 12 34 43 46 86 
